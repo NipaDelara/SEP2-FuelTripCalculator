@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.FuelController"
+      spacing="15"
+      alignment="CENTER"
+      prefWidth="500"
+      prefHeight="500">
+
+    <padding>
+        <Insets top="25" bottom="25"
+                left="30" right="30"/>
+    </padding>
+
+    <Label fx:id="lblTitle"
+           text="Fuel Trip Calculator"
+           style="-fx-font-size: 22px;
+                  -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="btnEN" text="EN"
+                onAction="#switchEnglish"/>
+        <Button fx:id="btnFR" text="FR"
+                onAction="#switchFrench"/>
+        <Button fx:id="btnJP" text="JP"
+                onAction="#switchJapanese"/>
+        <Button fx:id="btnIR" text="IR"
+                onAction="#switchPersian"/>
+    </HBox>
+
+    <Label fx:id="lblDistance"
+           text="Distance (km)"/>
+    <TextField fx:id="txtDistance"/>
+
+    <Label fx:id="lblConsumption"
+           text="Fuel Consumption (L/100 km)"/>
+    <TextField fx:id="txtConsumption"/>
+
+    <Label fx:id="lblPrice"
+           text="Fuel Price (per liter)"/>
+    <TextField fx:id="txtPrice"/>
+
+    <Button fx:id="btnCalculate"
+            text="Calculate Trip Cost"
+            onAction="#calculate"/>
+
+    <Label fx:id="lblResult"
+           text="Result will appear here"
+           wrapText="true"/>
+
+</VBox>
